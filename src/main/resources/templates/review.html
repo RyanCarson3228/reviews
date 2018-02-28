@@ -9,15 +9,15 @@
 <body>
 
 	<header>
-		<h1 th:text= "${reviews.title}"/>
+		<h1 th:text= "${review.title}"/>
 	</header>
 
-	<div th:each="review: ${reviews}">
+	<div th:each="review: ${review}">
 		<img th:src = "${review.url}"/>
 		<p th:text= "${review.date}"/>
 		<h2>Synopsis</h2>
 		<p th:text= "${review.synopsis}"/>
-		<h2>Content</h2>
+		<h2>Review</h2>
 		<p th:text= "${review.content}"/>
 		<a href= "http://localhost:8080/reviews">Back to home</a>
 	</div>
